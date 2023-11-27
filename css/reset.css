@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+/* *Raiz */
+:root {
+    --azul-pastel: rgb(89, 89, 159);
+    --blanco: white;
+
+    /* --tipo-principal: Helvetica, Arial, sans-serif; */
+    /* --tipo-secundaria: Verdana; */
+}
+
+/* *Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation en su ordenador  */
+@media (prefers-reduced-motion: reduce) {
+
+    * {
+        -webkit-animation: none;
+        animation: none;
+
+        -webkit-transition: none;
+        transition: none;
+    }
+}
+
+/** Reseteamos los margin y paddings de todas las etiquetas */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    /* Evitar problemas padding y margin */
+    vertical-align: baseline;
+    /* Resolver problemas pequeños de imagenes y texto */
+
+}
+
+nav,ul,li{
+    padding: 0;
+    margin: 0;
+}
+
+/** desbordamineto de imagenes (evitar) */
+img,
+picture,
+video,
+iframe,
+figure {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+}
+
+/** Reseteamos los enlaces para funcionar como cajas... */
+a {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+}
+
+li {
+    list-style-type: none;
+}
+
+/** Configuramos anclas suaves */
+html {
+    scroll-behavior: smooth;
+    /* Scrolleo (Scroll) suave  */
+}
+
+
+/** Configuramos el texto que seleccionamos en la pagina web */
+::-moz-selection {
+    background-color: var(--azul-pastel);
+    color: var(--blanco);
+}
+
+::selection {
+    background-color: var(--azul-pastel);
+    color: var(--blanco);
+}
+
+/* *Nivelamos problemas de tipografías y colocación de formularios */
+form,
+input,
+textarea,
+select,
+button,
+label {
+    font-family: inherit;
+    font-size: inherit;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto; /*? que es ?? */
+    background-color: transparent;
+    color: inherit;
+    display: block;
+
+    /** opcional (desactivamos estilos de los inputs en los navegadores) */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
+/* *Evitamos problemas con los SVG */
+svg {
+    width: 100%;
+    display: block;
+    fill: currentColor;
+}
+
+
+/** Configuramos la tipografía para toda la web */
+body {
+    min-height: auto;
+    font-size: 100%;
+    /* font-family: var(--tipo-principal); */
+    /* color: var(--negro); */
+}
