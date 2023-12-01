@@ -1,13 +1,14 @@
-const ham = document.querySelector(".ham");
-const enlaces = document.querySelector(".menu__enlaces");
-const barras = document.querySelectorAll(".ham span")
+//RESPONSIVE
+
+/* const menu__btn = document.querySelector('.menu__btn');
+const enlaces = document.querySelector('.menu__enlaces');
+const barras = document.querySelectorAll('.menu__btn span');
 
 
 
-
-ham.addEventListener('click', () => {
+menu__btn.addEventListener('click', () => {
     enlaces.classList.toggle('activado');
-    barras.forEach(child =>{
-        child.classList.toggle("animado");
-    })
+    barras.forEach(child => {child.classList.toggle('animado')});
+    menu__btn.classList.toggle('girar');
 });
+ */
