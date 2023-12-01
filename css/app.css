@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* @use 'utilities/variables';
 @use 'utilities/functions';
 @use 'utilities/mixins';
@@ -25,6 +26,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Send+Flowers&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Send+Flowers&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Send+Flowers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
 /* $colores-index:(
     "title": white,
@@ -47,7 +49,7 @@
   padding-top: 0.5rem;
 }
 
-.aviso__envios p {
+.aviso__envios h1 {
   color: white;
   font-size: 1.2rem;
   font-family: "Montserrat", sans-serif;
@@ -57,105 +59,121 @@
   width: 2rem;
 }
 
-.aviso a img {
-  width: 9rem;
+.aviso__logo img {
+  width: 8rem;
   display: block;
   margin: auto;
 }
 
+/* .menu {
+    background-color: #333;
+    padding: 10px;
+} */
 .menu__opciones {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 8vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.menu__opciones ul li {
-  position: relative;
-  float: left;
-}
-
-.menu__enlaces li {
-  text-decoration: none;
-  font-size: 1em;
-  color: #F941F9;
-}
-
-.menu__enlaces li:hover {
-  color: #2f09b8;
-}
-
-.menu__enlaces li a {
-  display: block;
-  margin: 20px;
-}
-
-.menu__enlaces li a i {
-  margin: 0 0.25rem;
-}
-
-.menu__active {
-  color: #2f09b8;
-}
-
-.menu__opciones ul li ul {
-  position: absolute;
-  left: 0;
-  width: auto;
-  display: none;
-  background-color: white;
-}
-
-.menu__opciones ul li ul li {
-  width: 100%;
-}
-
-.menu__opciones ul li ul li ul {
-  left: 200px;
-  top: 0;
-}
-
-.menu__opciones ul li:focus-within > ul,
-.menu__opciones ul li:hover > ul {
-  display: initial;
-}
-
-.ham {
-  display: block;
-  border: none;
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-}
-
-.ham span {
-  display: none;
-  background-color: rgb(236, 195, 12);
-  height: 3px;
-  width: 30px;
-  margin: 60px auato;
-  border-radius: 10px;
-}
-
-.enlaces-menu {
+.menu__enlaces {
+  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0;
   padding: 0;
 }
 
-.enlaces-menu li {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+.menu__enlaces li {
+  margin-right: 20px;
+  position: relative; /* Agregamos esta línea para establecer un contexto de posicionamiento */
+}
+
+.menu__enlaces a {
+  text-decoration: none;
+  color: #F941F9;
+  font-size: 1.125rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+.menu__enlaces a:hover {
+  color: #524FFF;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+.menu__opciones i {
+  margin: auto 0.3rem;
+}
+
+.menu .ct_item-active {
+  color: #524FFF;
+}
+
+.menu__enlaces ul {
+  display: none;
+  position: absolute;
+  top: 100%; /* Cambiamos 'auto' por '100%' para que la lista desplegable aparezca debajo del enlace padre */
+  left: 0;
+  background-color: white;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%; /* Añadimos esto para que la lista ocupe el ancho completo */
+}
+
+.menu__enlaces li:hover > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.menu__enlaces ul li {
+  margin: 0;
+  text-align: start;
+}
+
+.menu__enlaces ul a {
+  color: #F941F9;
+  padding: 10px 0;
+  display: block; /* Añadimos esto para que cada enlace ocupe el ancho completo */
+}
+
+/* .menu__btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+} */
+/* .menu__btn span {
+    background-color: #f3f3f3;
+    display: block;
+    height: 3px;
+    width: 28px;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+ */
+.br-1,
+.br-2,
+.br-3 {
+  background-color: white;
+  height: 3px;
+  width: 25px;
+  margin: 5px 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .flayer img {
@@ -163,121 +181,191 @@
   height: auto;
 }
 
-@media screen and (max-width: 768px) {
-  /*  body {
-       overflow: hidden;
-
-   }
-
-   .ham span {
-       background-color: red;
-       display: block;
-       position: absolute;
-       top: 15px;
-       right: 25px;
-   }
-
-   .menu__opciones {
-       flex-direction: column;
-       align-items: flex-start;
-       padding: 25px 0;
-
-   }
-
-   .enlaces-menu {
-       flex-direction: column;
-       justify-content: space-around;
-       align-items: center;
-       height: 92vh;
-       margin: 0;
-       padding: 0;
-       width: 100%;
-       display: none;
-       opacity: 0;
-   }
-
-   .enlaces-menu li {
-       width: 100%;
-       text-align: center;
-       padding: 20px;
-   } */
-  /* .menu {
-      padding: 20px;
-  }
-  .menu label .fa-bars {
-      display: initial;
-  }
-
-  .menu__opciones {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background-color: #bd1414;
-      border-top: 2px solid blue;
-      display: none;
-  }
-
-  .menu__opciones ul li {
-      width: 100%;
-  }
-
-  .menu__opciones ul li ul {
-      position: relative;
-      width: 100%;
-  }
-
-  .menu__opciones ul li ul li {
-      background-color: rgb(194, 61, 61);
-  }
-
-  .menu__opciones ul li ul li ul {
-      width: 100%;
-      left: 0;
-  }
-
-  #check:checked ~ .menu__opciones {
-      display: initial;
-  } */
+/* Filtro */
+/* PRODUCTOS */
+.productos {
+  color: #524FFF;
+  font-size: 2.25em;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 700;
+  margin: 4rem 0;
 }
-@-webkit-keyframes mostrarMenu {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes mostrarMenu {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.enlaces-menu.activado {
+
+.productos__lista {
+  width: 82%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-animation: mostrarMenu 350ms ease-in-out both;
-          animation: mostrarMenu 350ms ease-in-out both;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+}
+
+.productos__lista .productos__item {
+  width: 18%;
+  /* margin-left: 3%; */
+  margin-bottom: 1.5625rem;
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.254);
+          box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.254);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  background: rgba(212, 212, 212, 0.67);
+}
+
+.productos__lista .productos__item img {
+  width: 100%;
+}
+
+.productos__lista .productos__item h2 {
+  color: #000;
+  font-family: Poppins;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin: 0 1rem;
+}
+
+.productos__lista .productos__item p {
+  color: #5E5656;
+  font-family: Poppins;
+  font-size: 1.25em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0 1rem;
+}
+
+.productos__lista .productos__item .comprar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 1rem;
+}
+
+.productos__lista .productos__item .comprar p {
+  color: #000;
+  font-family: Poppins;
+  font-size: 1.25em;
+  margin-top: 1rem;
+}
+
+.productos__lista .productos__item a {
+  display: block;
+  width: 50%;
+  padding: 4px 0;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 2px;
+  background: #524FFF;
+}
+
+/* 
+
+.menu__btn {
+    display: none;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu__btn span {
+    background-color: #f3f3f3;
+    display: block;
+    height: 3px;
+    width: 28px;
+    margin: 10px auto;
+    border-radius: 2px;
+} */
+/* .menu__enlaces {
+    display: flex;
+    padding: 0;
+} */
+/* @media screen and (min-width:375px) and (max-width: 768px) {
+    body {
+        overflow: hidden;
+    }
+
+    .menu__btn {
+        display: block;
+        position: absolute;
+        top: 60px;
+        left: 25px;
+        transition: 0.2s 0.1s;
+    }
+    .menu__btn span{
+        background-color:  #524FFF;
+    }
+
+    .menu__enlaces {
+        flex-direction: column;
+        justify-content: center;
+        height: 50vh;
+        margin: 0;
+        padding: 0;
+        display: none;
+        opacity: 0;
+        transition: opacity 5s ease-out;
+        width: 100%;
+
+    }
+    .menu__enlaces li {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@keyframes muestraMenu {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.menu__enlaces.activado {
+    display: flex;
+    animation: muestraMenu 350ms ease-in-out both;
 }
 
 .br-1.animado {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+    transform: rotate(-45deg) translate(-10px, 8px);
 }
 
 .br-2.animado {
-  opacity: 0;
+    opacity: 0;
 }
 
 .br-3.animado {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+    transform: rotate(45deg) translate(-10px, -8px);
 }
 
+.menu__btn.girar:hover {
+    transform: rotate(360deg);
+}
+
+ */
 .freedom__inicio {
   position: relative;
   z-index: 1;
@@ -339,5 +427,58 @@
 @media screen and (min-width:375px) and  (max-width: 768px){
     .active{
         display: block;
+    }
+} */
+/* @media screen and (max-width: 600px) {
+    .menu__btn {
+        display: block;
+    }
+
+    .menu__enlaces {
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+    }
+    .menu__opciones i {
+        margin: 0;
+    }
+    .menu__enlaces.show {
+        display: flex;
+    }
+
+    .menu__enlaces li {
+        text-align: center;
+        margin: 0;
+        padding: 10px 0;
+        position: static; // Cambiamos a 'static' para que no afecte la posición absoluta en móviles 
+    }
+
+    .menu__enlaces ul {
+        position: static;
+        display: none;
+        width: 100%;
+    }
+    .menu .menu__enlaces--active {
+        color: #524FFF;
+    }
+    .menu__enlaces li:hover > ul {
+        display: block;
+        position: static; //Añadimos esto para que la lista desplegable no se superponga en móviles 
+    }
+
+    .menu__enlaces ul li {
+        text-align: center;
+    }
+
+    .menu__btn.open .br-1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu__btn.open .br-2 {
+        opacity: 0;
+    }
+
+    .menu__btn.open .br-3 {
+        transform: rotate(45deg) translate(-5px, -6px);
     }
 } */
