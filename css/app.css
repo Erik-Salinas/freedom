@@ -34,6 +34,62 @@
     "background-color:"violet,
     "background": rgb(126, 7, 126),
 ); */
+.freedom__inicio {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-top: 20vh;
+}
+
+.freedom__inicio h1,
+.freedom__inicio h2 {
+  font-size: 5em;
+  color: white;
+  font-family: "Send Flowers", cursive;
+}
+
+.freedom__inicio p {
+  font-size: 2em;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.empezemos {
+  margin-top: 3rem;
+}
+
+.freedom__inicio a {
+  background-color: violet;
+  color: white;
+  font-size: 1.5em;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+.freedom__inicio a:hover {
+  background-color: rgb(126, 7, 126);
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.freedom .fondo__computadora,
+.freedom .fondo__celular {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 0;
+}
+
+.active {
+  display: none;
+}
+
 .aviso__envios {
   background-color: #F0C1CA;
   display: -webkit-box;
@@ -207,7 +263,6 @@
 
 .productos__lista .productos__item {
   width: 18%;
-  /* margin-left: 3%; */
   margin-bottom: 1.5625rem;
   -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.254);
           box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.254);
@@ -225,8 +280,15 @@
 
 .productos__lista .productos__item img {
   width: 100%;
+  height: 32vh;
 }
 
+/* .productos__item--stock img{
+    opacity: 0.5;
+}
+.productos__item--stock h3{
+    position:absolute;
+} */
 .productos__lista .productos__item h2 {
   color: #000;
   font-family: Poppins;
@@ -245,6 +307,9 @@
   font-weight: 400;
   line-height: normal;
   margin: 0 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .productos__lista .productos__item .comprar {
@@ -276,6 +341,95 @@
   text-decoration: none;
   border-radius: 2px;
   background: #524FFF;
+}
+
+.icon .bi-whatsapp {
+  position: fixed;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  bottom: 30px;
+  right: 50px;
+  background: #13B71A;
+  color: white;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 30px;
+  -webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 3;
+  font-size: 3rem;
+}
+
+.icon .bi-whatsapp:hover {
+  text-decoration: none;
+  background: white;
+  color: #13B71A;
+}
+
+footer {
+  background: #F0C1CA;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pie-pagina {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pie-pagina__pago .icons, .icon__svg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.pie-pagina__pago h2 {
+  font-size: 1.2em;
+  color: #000;
+  margin-bottom: 1rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.pie-pagina__pago p {
+  font-size: 1em;
+  color: #000;
+  font-family: "Open Sans", sans-serif;
+}
+
+.pie-pagina__pago .bi-bank {
+  font-size: 2rem;
+}
+
+.pie-pagina__pago .bi-coin {
+  font-size: 2rem;
+  color: #13B71A;
+}
+
+.icons .bi-geo-alt-fill {
+  font-size: 2rem;
+  color: red;
+}
+
+.pie-pagina__pago .fa-truck {
+  font-size: 2rem;
+  color: #524FFF;
+}
+
+.icon__svg img {
+  width: 2rem;
 }
 
 /* 
@@ -366,62 +520,6 @@
 }
 
  */
-.freedom__inicio {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  margin-top: 20vh;
-}
-
-.freedom__inicio h1,
-.freedom__inicio h2 {
-  font-size: 5em;
-  color: white;
-  font-family: "Send Flowers", cursive;
-}
-
-.freedom__inicio p {
-  font-size: 2em;
-  color: white;
-  font-family: "Poppins", sans-serif;
-}
-
-.empezemos {
-  margin-top: 3rem;
-}
-
-.freedom__inicio a {
-  background-color: violet;
-  color: white;
-  font-size: 1.5em;
-  padding: 1rem 2rem;
-  border-radius: 10px;
-}
-
-.freedom__inicio a:hover {
-  background-color: rgb(126, 7, 126);
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
-}
-
-.freedom .fondo__computadora,
-.freedom .fondo__celular {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -webkit-filter: brightness(50%);
-          filter: brightness(50%);
-  -o-object-fit: cover;
-     object-fit: cover;
-  z-index: 0;
-}
-
-.active {
-  display: none;
-}
-
 /* 
 //*RESPONSIVE
 @media screen and (min-width:375px) and  (max-width: 768px){
