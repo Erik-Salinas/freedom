@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="icon" href="../img/logo-freedom.png">
+    <title>Contacto | Freedom</title>
+</head>
+
+<body>
+    <header>
+        <section class="aviso">
+            <article class="aviso__envios">
+                <h1>Enviós a todo el país</h1>
+                <img src="../img/icons/truck.svg" alt="Envios">
+            </article>
+            <article class="mt-4 aviso__logo ">
+                <a href="inicio.html"><img src="../img/logo-freedom-sin-fondo.png" alt="Logo del emprendimiento Freedom"></a>
+            </article>
+        </section>
+        <section class="menu">
+            <nav class="menu__opciones">
+                <button class="menu__btn" id="menuBtn" aria-label="Toggle Menu">
+                    <span class="br-1"></span>
+                    <span class="br-2"></span>
+                    <span class="br-3"></span>
+                </button>
+                <ul class="menu__enlaces" id="menuLinks">
+                    <li><a href="inicio.html"><i class="bi bi-house-heart-fill"></i>INICIO</a>
+                    </li>
+                    <li><a href="inicio.html#productos">PRODCUTOS <i class="fa-solid fa-angle-down"></i></a>
+                        <ul> <!--  Creamos atributo para el filtro -->
+                            <li><a href="#productos" class="category-item" category="all">TODO</a></li>
+                            <li><a href="#productos" class="category-item" category="conjunto">CONJUNTOS</a></li>
+                            <li><a href="#productos" class="category-item" category="bombachas">BOMBACHAS</a></li>
+                            <li><a href="#productos" class="category-item" category="bikinis">BIKINIS</a></li>
+                            <li><a href="#productos" class="category-item" category="medias">MEDIAS</a></li>
+                            <li><a href="#productos" class="category-item" category="scrunchies">SCRUNCHIES</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contacto.html" class="ct_item-active">CONTACTOS<i class="fa-solid fa-envelope"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <main>
+        <section class="contacto container">
+            <h1>CONTACTO</h1>
+            <article class="info">
+                <article class="info__contacto">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9289.233501162462!2d-58.40075114115581!3d-34.598092187349515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca943b03c3d7%3A0x4aaa7acded4ae7d3!2sFacultad%20de%20Medicina%20de%20la%20Universidad%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1701704495891!5m2!1ses!2sar"
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div>
+                        <h2>CONTACTANOS</h2>
+                        <a href="https://api.whatsapp.com/send?phone=5491166428146&text=Hola, estoy interesada en ..." target="_blank"><p><i class="bi bi-telephone-fill me-1"></i>1166428146 (Únicamente mensaje)</p></a>
+                        <a href="#"><p><i class="fa-solid fa-envelope me-1" target="_blank"></i>Freedom@gmail.com</p></a>
+                        <a href="https://maps.app.goo.gl/KTJP1RNcN3RBapaj8" target="_blank"><p><i class="bi bi-geo-alt-fill me-1"></i>Paraguay 2155, C1121 ABG, Buenos Aires
+                            (Viernes 9:00 am - 14:00 pm)</p></a>
+                    </div>
+                </article>
+                <article class="info__form">
+                    <form action="" method="post">
+                        <div>
+                            <label for="#">Nombre:</label>
+                            <input type="text" name="nombre" required>
+                        </div>
+                        <div>
+                            <label for="#">Email:</label>
+                            <input type="email" name="email" required>
+                        </div>
+                        <div>
+                            <label for="#">Teléfono (Opcional):</label>
+                            <input type="tel" name="telefono">
+                        </div>
+                        <div>
+                            <label for="#">Mensaje (Opcional):</label>
+                            <textarea name="consulta" placeholder="Escriba aquí ..."></textarea>
+                        </div>
+                        <div>
+                            <button type="submit">ENVIAR</button>
+                        </div>
+                    </form>
+                </article>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <article class="pie-pagina">
+                <div class=" pie-pagina__pago mt-4">
+                    <h2>METODOS DE PAGO</h2>
+                    <div class="icons">
+                        <div>
+                            <img src="../img/icons/mercado-pago.svg" alt="Mercado pago">
+                        </div>
+                        <p><i class="bi bi-bank me-1"></i>Transferencia bancaria</p>
+                        <p><i class="bi bi-coin me-1"></i>Pago en efectivo</p>
+                    </div>
+                </div>
+            </article>
+            <article class=" pie-pagina__pago mt-4">
+                <h2>METODOS DE ENVIOS</h2>
+                <div>
+                    <div class="icons">
+                        <p><i class="bi bi-geo-alt-fill me-1"></i>Punto de encuentro</p>
+                        <p><i class="fa-solid fa-truck me-1"></i>Envió a domicilio</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article class="pie-pagina">
+                <div class=" pie-pagina__pago mt-4">
+                    <h2>REDES SOCIALES</h2>
+                    <div class="icon__svg">
+                        <a href="https://api.whatsapp.com/send?phone=5491166428146&text=Hola, estoy interesada en ..."
+                            target="_blank"><img src="../img/icons/whatsapp.svg" alt="whatsapp"></a>
+                        <a href="https://www.instagram.com/_freedom_arg/" target="_blank"><img
+                                src="../img/icons/instagram.png" alt="instagram"></a>
+                        <a href="contacto.html" target="_blank"><img src="../img/icons/gmail.svg" alt="gmail"></a>
+                    </div>
+                </div>
+            </article>
+            <article class=" pie-pagina__pago mt-4">
+                <h2>ATENCIÓN AL CLINETE</h2>
+                <p>Preguntas frecuntes</p>
+                <p>Cómo comprar</p>
+            </article>
+        </section>
+    </footer>
+</body>
+
+</html>

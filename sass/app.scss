@@ -141,7 +141,8 @@
 
 .menu__enlaces li {
     margin-right: 20px;
-    position: relative; /* Agregamos esta línea para establecer un contexto de posicionamiento */
+    position: relative;
+    /* Agregamos esta línea para establecer un contexto de posicionamiento */
 }
 
 .menu__enlaces a {
@@ -160,23 +161,26 @@
 .menu__opciones i {
     margin: auto 0.3rem;
 }
-.menu .ct_item-active{
+
+.menu .ct_item-active {
     color: #524FFF;
 }
 
 .menu__enlaces ul {
     display: none;
     position: absolute;
-    top: 100%; /* Cambiamos 'auto' por '100%' para que la lista desplegable aparezca debajo del enlace padre */
+    top: 100%;
+    /* Cambiamos 'auto' por '100%' para que la lista desplegable aparezca debajo del enlace padre */
     left: 0;
     background-color: #ffff;
     list-style: none;
     padding: 0;
     margin: 0;
-    width: 100%; /* Añadimos esto para que la lista ocupe el ancho completo */
+    width: 100%;
+    /* Añadimos esto para que la lista ocupe el ancho completo */
 }
 
-.menu__enlaces li:hover > ul {
+.menu__enlaces li:hover>ul {
     display: flex;
     flex-direction: column;
 }
@@ -189,7 +193,8 @@
 .menu__enlaces ul a {
     color: #F941F9;
     padding: 10px 0;
-    display: block; /* Añadimos esto para que cada enlace ocupe el ancho completo */
+    display: block;
+    /* Añadimos esto para que cada enlace ocupe el ancho completo */
 }
 
 /* .menu__btn {
@@ -217,6 +222,7 @@
     margin: 5px 0;
     transition: 0.4s;
 }
+
 .flayer img {
     width: auto;
     height: auto;
@@ -224,7 +230,7 @@
 
 /* Filtro */
 /* PRODUCTOS */
-.productos{
+.productos {
     color: #524FFF;
     font-size: 2.25em;
     text-align: center;
@@ -232,7 +238,8 @@
     font-weight: 700;
     margin: 4rem 0;
 }
-.productos__lista{
+
+.productos__lista {
     width: 82%;
     display: flex;
     justify-content: center;
@@ -240,16 +247,17 @@
     gap: 20px;
 }
 
-.productos__lista .productos__item{
+.productos__lista .productos__item {
     width: 18%;
     margin-bottom: 1.5625rem;
-    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.254) ;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.254);
     display: flex;
     flex-direction: column;
-    align-self:flex-start ;
+    align-self: flex-start;
     background: rgba(212, 212, 212, 0.67);
 }
-.productos__lista .productos__item img{
+
+.productos__lista .productos__item img {
     width: 100%;
     height: 32vh;
 }
@@ -262,7 +270,7 @@
     position:absolute;
 } */
 
-.productos__lista .productos__item h2{
+.productos__lista .productos__item h2 {
     color: #000;
     font-family: Poppins;
     font-size: 1.5rem;
@@ -271,7 +279,8 @@
     line-height: normal;
     margin: 0 1rem;
 }
-.productos__lista .productos__item p{
+
+.productos__lista .productos__item p {
     color: #5E5656;
     font-family: Poppins;
     font-size: 1.25em;
@@ -287,7 +296,7 @@
 .productos__lista .productos__item .comprar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     margin-right: 1rem;
 }
 
@@ -298,18 +307,43 @@
     margin-top: 1rem
 }
 
-.productos__lista .productos__item a{
-    display: block;
+.productos__lista .productos__item a {
     width: 50%;
-    padding:  4px 0;
     color: white;
     text-align: center;
     text-decoration: none;
     border-radius: 2px;
     background: #524FFF;
+    text-transform: uppercase;
+    position: relative;
+    transition: 0.3s ease all;
+    z-index: 2;
 }
 
-.icon .bi-whatsapp{
+.productos__lista .productos__item a:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #FF0072;
+    z-index: -2;
+}
+.productos__lista .productos__item a:hover:before,
+button:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+.productos__lista .productos__item a:active {
+    transform: scale(0.9);
+}
+
+.icon .bi-whatsapp {
     position: fixed;
     width: 4.5rem;
     line-height: 4.5rem;
@@ -320,16 +354,135 @@
     border-radius: 100%;
     text-align: center;
     font-size: 30px;
-    box-shadow: 0px 1px 10px rgb(0,0,0,0.3);
+    box-shadow: 0px 1px 10px rgb(0, 0, 0, 0.3);
     z-index: 3;
     font-size: 3rem;
 }
-.icon .bi-whatsapp:hover{
+
+.icon .bi-whatsapp:hover {
     text-decoration: none;
     background: #ffff;
     color: #13B71A;
 }
-footer{
+
+//CONTACTO 
+
+.contacto {
+    margin: 8rem auto;
+    width: 100%;
+    border-top: 2px solid #524FFF;
+}
+
+.contacto .info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacto h1 {
+    color: #524FFF;
+    background: #ffff;
+    font-size: 2.25em;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 700;
+    margin: auto;
+    width: 13.125rem;
+    position: relative;
+    bottom: 20px;
+}
+
+.info__contacto h2 {
+    color: #000;
+    font-family: Open Sans;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+.info__contacto a p {
+    color: #000;
+    font-family: Open Sans;
+    font-size: 0.9em;
+    font-weight: 700;
+}
+
+.info__contacto a p i {
+    color: #F0C1CA;
+    font-size: 20px;
+}
+
+.info__contacto a p:hover,
+.info__contacto a p i:hover {
+    color: #524FFF;
+}
+
+.info__form {
+    width: 42%;
+}
+
+.info__form label {
+    color: #000;
+    font-family: Open Sans;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.info__form input {
+    border: #524FFF 1px solid;
+    outline: none;
+    width: 100%;
+    height: 5vh;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    padding: 0.5rem;
+}
+
+.info__form textarea {
+    border: #524FFF 1px solid;
+    outline: none;
+    resize: none;
+    width: 100%;
+    height: 30vh;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+.info__form button {
+    position: relative;
+    background-color: #524FFF;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 5vh;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    transition: all .3s ease-in-out;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.info__form button::before {
+    content: "";
+    /* ??? */
+    background-color: #F941F9;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 700ms ease-in-out;
+    display: inline-block;
+}
+
+.info__form button:hover::before {
+    width: 100%;
+}
+
+footer {
     background: #F0C1CA;
     display: flex;
     justify-content: space-around;
@@ -337,45 +490,53 @@ footer{
     align-items: center;
 }
 
-.pie-pagina{
+.pie-pagina {
     display: flex;
 }
 
-.pie-pagina__pago .icons, .icon__svg{
+.pie-pagina__pago .icons,
+.icon__svg {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
-.pie-pagina__pago h2{
+
+.pie-pagina__pago h2 {
     font-size: 1.2em;
     color: #000;
     margin-bottom: 1rem;
     font-family: 'Open Sans', sans-serif;
 }
-.pie-pagina__pago p{
+
+.pie-pagina__pago p {
     font-size: 1em;
     color: #000;
     font-family: 'Open Sans', sans-serif;
 }
-.pie-pagina__pago .bi-bank{
+
+.pie-pagina__pago .bi-bank {
     font-size: 2rem;
 }
-.pie-pagina__pago .bi-coin{
+
+.pie-pagina__pago .bi-coin {
     font-size: 2rem;
     color: #13B71A;
 }
-.icons .bi-geo-alt-fill{
+
+.icons .bi-geo-alt-fill {
     font-size: 2rem;
     color: red;
 }
-.pie-pagina__pago .fa-truck{
+
+.pie-pagina__pago .fa-truck {
     font-size: 2rem;
     color: #524FFF;
 }
 
-.icon__svg img{
+.icon__svg img {
     width: 2rem;
 }
+
 /* 
 
 .menu__btn {
