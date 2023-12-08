@@ -1,0 +1,20 @@
+[
+    {
+        "id": "set-coco",
+        "nombre": "SET COCO",
+        "descripcion": "Conjunto bralette con bombi regulable. Cuenta con una excelente tela 100% de calidad.",
+        "color": ["Negro", "Rojo", "Violeta"],
+        "talles": [85, 90, 95],
+        "precio": 4350,
+        "imagen": "../img/pruduct/set-coco.JPG"
+    },
+    {
+        "id": "set-dora",
+        "nombre": "SET DORA",
+        "descripcion": "Conjunto bralette con bombi regulable.",
+        "color": ["Negro", "Rojo", "Violeta"],
+        "talles": [85, 90, 95],
+        "precio": 3850,
+        "imagen": "../img/pruduct/set-coco.JPG"
+    }
+]
