@@ -725,12 +725,12 @@ footer {
     width: 28px;
     margin: 10px auto;
     border-radius: 2px;
-} 
+}
 
- .menu__enlaces {
+.menu__enlaces {
     display: flex;
     padding: 0;
-} 
+}
 
 
 
@@ -854,7 +854,127 @@ footer {
         width: 100%;
     }
 
+    //?PRODUCTO
+    .informacion__producto figure img {
+        width: 100%;
+        height: 25rem;
+    }
+
+    .informacion__producto figure .datos {
+        width: 100%;
+    }
+
+    .informacion__producto figure .datos h1,   .informacion__producto figure .datos p {
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 0rem;
+    }
+    .informacion__producto figure .datos h2{
+        margin-top: 2rem;
+    }
+    .menu__btn {
+        display: block;
+        position: absolute;
+        top: 60px;
+        left: 25px;
+        transition: 0.2s 0.1s;
+    }
+
+    .menu__btn span {
+        background-color: #524FFF;
+    }
+
+    .menu__enlaces {
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        display: none;
+        opacity: 0;
+        transition: opacity 5s ease-out;
+        width: 100%;
+    }
+
+    .menu__opciones i {
+        margin: 0;
+    }
+
+    .menu__enlaces.show {
+        display: flex;
+    }
+
+    .menu__enlaces li {
+        text-align: center;
+        margin: 0;
+        padding: 0.9rem 0;
+        position: static; // Cambiamos a 'static' para que no afecte la posición absoluta en móviles 
+    }
+
+    .menu__enlaces ul {
+        position: static;
+        display: none;
+        width: 100%;
+    }
+
+    .menu .menu__enlaces--active {
+        color: #524FFF;
+    }
+
+    .menu__enlaces li:hover>ul {
+        display: block;
+        position: static; //Añadimos esto para que la lista desplegable no se superponga en móviles 
+    }
+
+    .menu__enlaces ul li {
+        text-align: center;
+    }
+
+    .menu__btn.open .br-1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu__btn.open .br-2 {
+        opacity: 0;
+    }
+
+    .menu__btn.open .br-3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
 }
+
+//menu
+@keyframes muestraMenu {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.menu__enlaces.activado {
+    display: flex;
+    animation: muestraMenu 350ms ease-in-out both;
+}
+
+.br-1.animado {
+    transform: rotate(-45deg) translate(-10px, 8px);
+}
+
+.br-2.animado {
+    opacity: 0;
+}
+
+.br-3.animado {
+    transform: rotate(45deg) translate(-10px, -8px);
+}
+
+.menu__btn.girar:hover {
+    transform: rotate(360deg);
+}
+
 
 @media (max-width: 1024px) and (orientation: landscape) {
     .active {
@@ -891,6 +1011,7 @@ footer {
         margin: 1.5rem;
         text-align: center;
     }
+
     .info__form input {
         height: 8vh;
     }
@@ -902,13 +1023,15 @@ footer {
     .info__form button {
         height: 13vh;
     }
+
     .info__contacto a p {
         text-align: center;
     }
+
     .info__form {
         width: 100%;
     }
-    
+
 
     footer {
         display: flex;
@@ -924,138 +1047,3 @@ footer {
         font-family: 'Open Sans', sans-serif;
     }
 }
-
-
- /* @media screen and (min-width:375px) and (max-width: 768px) {
-    body {
-        overflow: hidden;
-    }
-    .menu__btn {
-        display: block;
-        position: absolute;
-        top: 60px;
-        left: 25px;
-        transition: 0.2s 0.1s;
-    }
-    .menu__btn span{
-        background-color:  #524FFF;
-    }
-
-    .menu__enlaces {
-        flex-direction: column;
-        justify-content: center;
-        height: 50vh;
-        margin: 0;
-        padding: 0;
-        display: none;
-        opacity: 0;
-        transition: opacity 5s ease-out;
-        width: 100%;
-
-    }
-    .menu__enlaces li {
-        text-align: center;
-        width: 100%;
-    }
-}  */
-
-
-@media screen and (max-width: 600px) {
-    .menu__btn {
-        display: block;
-        position: absolute;
-        top: 60px;
-        left: 25px;
-        transition: 0.2s 0.1s;
-    }
-    .menu__btn span{
-        background-color:  #524FFF;
-    }
-    .menu__enlaces {
-        flex-direction: column;
-        justify-content: center;
-        margin: 0;
-        padding: 0;
-        display: none;
-        opacity: 0;
-        transition: opacity 5s ease-out;
-        width: 100%;
-    }
-
-    .menu__opciones i {
-        margin: 0;
-    }
-    .menu__enlaces.show {
-        display: flex;
-    }
-
-    .menu__enlaces li {
-        text-align: center;
-        margin: 0;
-        padding: 0.9rem  0;
-        position: static; // Cambiamos a 'static' para que no afecte la posición absoluta en móviles 
-    }
-
-    .menu__enlaces ul {
-        position: static;
-        display: none;
-        width: 100%;
-    }
-    .menu .menu__enlaces--active {
-        color: #524FFF;
-    }
-    .menu__enlaces li:hover > ul {
-        display: block;
-        position: static; //Añadimos esto para que la lista desplegable no se superponga en móviles 
-    }
-
-    .menu__enlaces ul li {
-        text-align: center;
-    }
-
-    .menu__btn.open .br-1 {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-
-    .menu__btn.open .br-2 {
-        opacity: 0;
-    }
-
-    .menu__btn.open .br-3 {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
-} 
-
-
-@keyframes muestraMenu {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-.menu__enlaces.activado {
-    display: flex;
-    animation: muestraMenu 350ms ease-in-out both;
-}
-
-.br-1.animado {
-    transform: rotate(-45deg) translate(-10px, 8px);
-}
-
-.br-2.animado {
-    opacity: 0;
-}
-
-.br-3.animado {
-    transform: rotate(45deg) translate(-10px, -8px);
-}
-
-.menu__btn.girar:hover {
-    transform: rotate(360deg);
-}
-
-
