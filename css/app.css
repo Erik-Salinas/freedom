@@ -117,14 +117,9 @@
 
 .aviso__logo img {
   width: 8rem;
-  display: block;
   margin: auto;
 }
 
-/* .menu {
-    background-color: #333;
-    padding: 10px;
-} */
 .menu__opciones {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -211,21 +206,6 @@
   /* Añadimos esto para que cada enlace ocupe el ancho completo */
 }
 
-/* .menu__btn {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    display: none;
-} */
-/* .menu__btn span {
-    background-color: #f3f3f3;
-    display: block;
-    height: 3px;
-    width: 28px;
-    margin: 10px auto;
-    border-radius: 2px;
-}
- */
 .br-1,
 .br-2,
 .br-3 {
@@ -288,12 +268,6 @@
   height: 32vh;
 }
 
-/* .productos__item--stock img{
-    opacity: 0.5;
-}
-.productos__item--stock h3{
-    position:absolute;
-} */
 .productos__lista .productos__item figcaption h2 {
   color: #000;
   font-family: Poppins;
@@ -713,6 +687,43 @@ button:focus:before {
   width: 100%;
 }
 
+.gracias h1 {
+  color: black;
+  font-size: 3em;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 700;
+}
+
+.gracias p {
+  color: #F941F9;
+  font-size: 1.5em;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 400;
+}
+
+.gracias h2 {
+  color: black;
+  font-size: 1.5em;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 400;
+}
+
+.gracias .icon__svg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5rem;
+}
+
 footer {
   background: #F0C1CA;
   display: -webkit-box;
@@ -922,112 +933,21 @@ footer {
   .info__form {
     width: 100%;
   }
-}
-@media (max-width: 1024px) and (orientation: landscape) {
-  .active {
-    display: none;
+  .informacion__producto figure img {
+    width: 100%;
+    height: 25rem;
   }
-  .freedom__inicio {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    margin-top: 4rem;
-  }
-  .empezemos {
-    margin-top: 2rem;
-  }
-  .productos__lista {
-    width: 70%;
-    gap: 10px;
-  }
-  .productos__lista .productos__item {
-    width: 30%;
-  }
-  .contacto .info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .info__contacto h2 {
-    margin: 1.5rem;
-    text-align: center;
-  }
-  .info__form input {
-    height: 8vh;
-  }
-  .info__form textarea {
-    height: 35vh;
-  }
-  .info__form button {
-    height: 13vh;
-  }
-  .info__contacto a p {
-    text-align: center;
-  }
-  .info__form {
+  .informacion__producto figure .datos {
     width: 100%;
   }
-  footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
+  .informacion__producto figure .datos h1, .informacion__producto figure .datos p {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
   }
-  .pie-pagina__pago .pie-pagina__pago h2 {
-    font-size: 1.2em;
-    color: #000;
-    margin-bottom: 1rem;
-    font-family: "Open Sans", sans-serif;
+  .informacion__producto figure .datos h2 {
+    margin-top: 2rem;
   }
-}
-/* @media screen and (min-width:375px) and (max-width: 768px) {
-    body {
-        overflow: hidden;
-    }
-    .menu__btn {
-        display: block;
-        position: absolute;
-        top: 60px;
-        left: 25px;
-        transition: 0.2s 0.1s;
-    }
-    .menu__btn span{
-        background-color:  #524FFF;
-    }
-
-    .menu__enlaces {
-        flex-direction: column;
-        justify-content: center;
-        height: 50vh;
-        margin: 0;
-        padding: 0;
-        display: none;
-        opacity: 0;
-        transition: opacity 5s ease-out;
-        width: 100%;
-
-    }
-    .menu__enlaces li {
-        text-align: center;
-        width: 100%;
-    }
-}  */
-@media screen and (max-width: 600px) {
   .menu__btn {
     display: block;
     position: absolute;
@@ -1137,4 +1057,77 @@ footer {
 .menu__btn.girar:hover {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .active {
+    display: none;
+  }
+  .freedom__inicio {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin-top: 4rem;
+  }
+  .empezemos {
+    margin-top: 2rem;
+  }
+  .productos__lista {
+    width: 70%;
+    gap: 10px;
+  }
+  .productos__lista .productos__item {
+    width: 30%;
+  }
+  .contacto .info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .info__contacto h2 {
+    margin: 1.5rem;
+    text-align: center;
+  }
+  .info__form input {
+    height: 8vh;
+  }
+  .info__form textarea {
+    height: 35vh;
+  }
+  .info__form button {
+    height: 13vh;
+  }
+  .info__contacto a p {
+    text-align: center;
+  }
+  .info__form {
+    width: 100%;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  .pie-pagina__pago .pie-pagina__pago h2 {
+    font-size: 1.2em;
+    color: #000;
+    margin-bottom: 1rem;
+    font-family: "Open Sans", sans-serif;
+  }
 }
