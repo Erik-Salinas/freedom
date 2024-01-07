@@ -115,16 +115,11 @@
     width: 2rem;
 }
 
+
 .aviso__logo img {
     width: 8rem;
-    display: block;
     margin: auto;
 }
-
-/* .menu {
-    background-color: #333;
-    padding: 10px;
-} */
 
 .menu__opciones {
     display: flex;
@@ -198,22 +193,6 @@
     /* Añadimos esto para que cada enlace ocupe el ancho completo */
 }
 
-/* .menu__btn {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    display: none;
-} */
-
-/* .menu__btn span {
-    background-color: #f3f3f3;
-    display: block;
-    height: 3px;
-    width: 28px;
-    margin: 10px auto;
-    border-radius: 2px;
-}
- */
 .br-1,
 .br-2,
 .br-3 {
@@ -262,14 +241,6 @@
     width: 100%;
     height: 32vh;
 }
-
-//!Sin stock , revisar
-/* .productos__item--stock img{
-    opacity: 0.5;
-}
-.productos__item--stock h3{
-    position:absolute;
-} */
 
 .productos__lista .productos__item figcaption h2 {
     color: #000;
@@ -653,6 +624,35 @@ button:focus:before {
     width: 100%;
 }
 
+//GRACIAS
+
+.gracias h1{
+    color: black;
+    font-size: 3em;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 700;
+}
+.gracias p{
+    color: #F941F9;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 400;
+}
+.gracias h2{
+    color: black;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 400;
+}
+.gracias .icon__svg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
 footer {
     background: #F0C1CA;
     display: flex;
