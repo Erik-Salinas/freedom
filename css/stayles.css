@@ -1,39 +1,18 @@
 @charset "UTF-8";
-/* @use 'utilities/variables';
-@use 'utilities/functions';
-@use 'utilities/mixins';
-@use 'utilities/helpers';
-
-@use 'vendors/boostrap';
-
-@use 'vendors-extensions/boostrap';
-
-@use 'base/reset';
-@use 'base/typography';
-@use 'base/animations';
-@use 'base/base';
-
-@use 'components/buttons';
-@use 'components/carousel';
-@use 'components/cover';
-@use 'components/dropdown';
-
-@use 'pages/home';
-@use 'pages/contact';
-
-@use 'themes/theme';
-@use 'themes/admin'; */
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Send+Flowers&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Send+Flowers&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Send+Flowers&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
-/* $colores-index:(
-    "title": white,
-    "subtitle": white,
-    "background-color:"violet,
-    "background": rgb(126, 7, 126),
-); */
+
+:root{
+  --color-primario:#F0C1CA;
+  --color-secundario:#524FFF;
+  --color-whatsapp: #13B71A;
+  --tipgrafia-primario: "Send Flowers", cursive;
+  --tipgrafia-secundario: "Poppins", sans-serif;
+  --tipografia-terciario: "Montserrat", sans-serif;
+}
 .freedom__inicio {
   position: relative;
   z-index: 1;
@@ -45,13 +24,13 @@
 .freedom__inicio h2 {
   font-size: 5em;
   color: white;
-  font-family: "Send Flowers", cursive;
+  font-family: var(--tipografia-primario)
 }
 
 .freedom__inicio p {
   font-size: 2em;
   color: white;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--tipografia-secundario);
 }
 
 .empezemos {
@@ -82,7 +61,7 @@
   -webkit-filter: brightness(50%);
           filter: brightness(50%);
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   z-index: 0;
 }
 
@@ -91,7 +70,7 @@
 }
 
 .aviso__envios {
-  background-color: #F0C1CA;
+  background-color: var(--color-primario);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -108,7 +87,7 @@
 .aviso__envios h1 {
   color: white;
   font-size: 1.2rem;
-  font-family: "Montserrat", sans-serif;
+  font-family:var(--tipografia-terciario);
 }
 
 .aviso__envios img {
@@ -144,7 +123,6 @@
 .menu__enlaces li {
   margin-right: 20px;
   position: relative;
-  /* Agregamos esta línea para establecer un contexto de posicionamiento */
 }
 
 .menu__enlaces a {
@@ -156,7 +134,7 @@
 }
 
 .menu__enlaces a:hover {
-  color: #524FFF;
+  color: var(--color-secundario);
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -166,14 +144,13 @@
 }
 
 .menu .ct_item-active {
-  color: #524FFF;
+  color: var(--color-secundario);
 }
 
 .menu__enlaces ul {
   display: none;
   position: absolute;
   top: 100%;
-  /* Cambiamos 'auto' por '100%' para que la lista desplegable aparezca debajo del enlace padre */
   left: 0;
   background-color: white;
   list-style: none;
@@ -181,7 +158,6 @@
   margin: 0;
   width: 100%;
   z-index: 4;
-  /* Añadimos esto para que la lista ocupe el ancho completo */
 }
 
 .menu__enlaces li:hover > ul {
@@ -203,7 +179,6 @@
   color: #F941F9;
   padding: 10px 0;
   display: block;
-  /* Añadimos esto para que cada enlace ocupe el ancho completo */
 }
 
 .br-1,
@@ -225,7 +200,7 @@
 /* Filtro */
 /* PRODUCTOS */
 .productos {
-  color: #524FFF;
+  color: var(--color-secundario);
   font-size: 2.25em;
   text-align: center;
   font-family: Poppins;
@@ -317,7 +292,7 @@
   text-align: center;
   text-decoration: none;
   border-radius: 2px;
-  background: #524FFF;
+  background: var(--color-secundario);
   text-transform: uppercase;
   position: relative;
   -webkit-transition: 0.3s ease all;
@@ -359,7 +334,7 @@ button:focus:before {
   line-height: 4.5rem;
   bottom: 30px;
   right: 50px;
-  background: #13B71A;
+  background:var(--color-whatsapp);
   color: white;
   border-radius: 100%;
   text-align: center;
@@ -373,7 +348,7 @@ button:focus:before {
 .icon .bi-whatsapp:hover {
   text-decoration: none;
   background: white;
-  color: #13B71A;
+  color:var(--color-whatsapp);
 }
 
 .informacion {
@@ -449,7 +424,7 @@ button:focus:before {
   display: inline-block;
   width: 2rem;
   height: 2rem;
-  background-color: #524FFF;
+  background-color: var(--color-secundario);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -523,7 +498,7 @@ button:focus:before {
 
 .producto__compra {
   border-radius: 3px;
-  background: #524FFF;
+  background: var(--color-secundario);
   color: white;
   font-family: Poppins;
   font-weight: 500;
@@ -568,7 +543,7 @@ button:focus:before {
 .contacto {
   margin: 8rem auto;
   width: 100%;
-  border-top: 2px solid #524FFF;
+  border-top: 2px solid var(--color-secundario);
 }
 
 .contacto .info {
@@ -581,7 +556,7 @@ button:focus:before {
 }
 
 .contacto h1 {
-  color: #524FFF;
+  color: var(--color-secundario);
   background: white;
   font-size: 2.25em;
   text-align: center;
@@ -609,13 +584,13 @@ button:focus:before {
 }
 
 .info__contacto a p i {
-  color: #F0C1CA;
+  color: var(--color-primario);
   font-size: 20px;
 }
 
 .info__contacto a p:hover,
 .info__contacto a p i:hover {
-  color: #524FFF;
+  color: var(--color-secundario);
 }
 
 .info__form {
@@ -630,7 +605,7 @@ button:focus:before {
 }
 
 .info__form input {
-  border: #524FFF 1px solid;
+  border: var(--color-secundario) 1px solid;
   outline: none;
   width: 100%;
   height: 5vh;
@@ -640,7 +615,7 @@ button:focus:before {
 }
 
 .info__form textarea {
-  border: #524FFF 1px solid;
+  border: var(--color-secundario) 1px solid;
   outline: none;
   resize: none;
   width: 100%;
@@ -651,7 +626,7 @@ button:focus:before {
 
 .info__form button {
   position: relative;
-  background-color: #524FFF;
+  background-color: var(--color-secundario);
   border-radius: 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -725,7 +700,7 @@ button:focus:before {
 }
 
 footer {
-  background: #F0C1CA;
+  background: var(--color-primario);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -774,7 +749,7 @@ footer {
 
 .pie-pagina__pago .bi-coin {
   font-size: 2rem;
-  color: #13B71A;
+  color:var(--color-whatsapp);
 }
 
 .icons .bi-geo-alt-fill {
@@ -784,7 +759,7 @@ footer {
 
 .pie-pagina__pago .fa-truck {
   font-size: 2rem;
-  color: #524FFF;
+  color: var(--color-secundario);
 }
 
 .icon__svg img {
@@ -828,10 +803,10 @@ footer {
     font-size: 1.5em;
   }
   .freedom__inicio a {
-    background-color: #524FFF;
+    background-color: var(--color-secundario);
   }
   .productos {
-    color: #524FFF;
+    color: var(--color-secundario);
     font-size: 2em;
     margin: 2rem 0;
   }
@@ -860,7 +835,7 @@ footer {
     text-align: center;
     text-decoration: none;
     border-radius: 2px;
-    background: #524FFF;
+    background: var(--color-secundario);
   }
   .productos__lista .productos__item .comprar {
     -webkit-box-align: baseline;
@@ -957,7 +932,7 @@ footer {
     transition: 0.2s 0.1s;
   }
   .menu__btn span {
-    background-color: #524FFF;
+    background-color: var(--color-secundario);
   }
   .menu__enlaces {
     -webkit-box-orient: vertical;
@@ -995,7 +970,7 @@ footer {
     width: 100%;
   }
   .menu .menu__enlaces--active {
-    color: #524FFF;
+    color: var(--color-secundario);
   }
   .menu__enlaces li:hover > ul {
     display: block;
