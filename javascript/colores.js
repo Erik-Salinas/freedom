@@ -7,7 +7,7 @@ colorOptions.forEach(option => {
 });
 
 // Seleccionar el color por defecto (puedes cambiar este valor)
-const defaultColorClass = 'black'; //Clase
+const defaultColorClass = 'color__option--active'; //Clase
 
 // Encontrar la opción del color por defecto
 const defaultOption = Array.from(colorOptions).find(option => option.classList.contains(defaultColorClass));

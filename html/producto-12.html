@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/stayles.css">
     <link rel="icon" href="../img/logo-freedom.png">
-    <meta name="description" content="Ofrecemos productos de lencería de última moda. Calidad y precio en todos nuestros productos.">
+    <meta name="description"
+        content="Ofrecemos productos de lencería de última moda. Calidad y precio en todos nuestros productos.">
     <meta name="keywords" content="Lenceria, Medias, Bikinis,Conjuntos,Bombachas, scrunchies">
     <meta name="author" content="Salinas erik">
     <meta name="copyright" content="Geovanna scarlet cagua" />
@@ -42,7 +43,7 @@
                 <ul class="menu__enlaces" id="menuLinks">
                     <li><a href="inicio.html" class="ct_item-active"><i class="bi bi-house-heart-fill"></i>INICIO</a>
                     </li>
-                    <li><a href="inicio.html#productos">PRODCUTOS <i class="fa-solid fa-angle-down"></i></a>
+                    <li><a href="inicio.html#productos">PRODUCTOS <i class="fa-solid fa-angle-down"></i></a>
                         <ul> <!--  Creamos atributo para el filtro -->
                             <li><a href="inicio.html#productos" class="category-item" category="all">TODO</a></li>
                             <li><a href="inicio.html#productos" class="category-item" category="conjunto">CONJUNTOS</a>
@@ -54,9 +55,10 @@
                             <li><a href="inicio.html#productos" class="category-item" category="medias">MEDIAS</a></li>
                             <li><a href="inicio.html#productos" class="category-item"
                                     category="scrunchies">SCRUNCHIES</a></li>
+                            <li><a href="#productos" class="category-item menu-item" category="body">BODY</a></li>
                         </ul>
                     </li>
-                <li><a href="contacto.html"><i class="fa-solid fa-envelope"></i>CONTACTOS</a></li>
+                    <li><a href="contacto.html"><i class="fa-solid fa-envelope"></i>CONTACTOS</a></li>
                 </ul>
             </nav>
         </section>
@@ -68,23 +70,24 @@
                     <img src="../img/pruduct/set-coco.JPG" alt="Bombachas">
                     <div class="datos">
                         <h1>SET COCO</h1>
-                        <p>Conjunto bralette con bombi regulable. Cuenta con una excelente tela 100% de calidad.</p>
+                        <p>Bralette encaje con bombi regulable. Cuenta con una excelente tela de algodón 100% de
+                            calidad.</p>
                         <h2>COLOR</h2>
                         <div class="datos__colores">
                             <div id="colorOptions">
-                                <div class="colorOption black "></div>
+                                <!-- Modificación de colores  -->
+                                <div class="colorOption color__option--active black "></div>
                                 <div class="colorOption red"></div>
-                                <div class="colorOption violet "></div>
+                                <div class="colorOption white "></div>
+                                <div class="colorOption mustard"></div>
                             </div>
                         </div>
                         <h2 class="mt-3">TALLE</h2>
                         <div class="datos__numeros" id="opciones__numeros">
                             <div class="datos__opciones">
                                 <div class="numeroOption" data-value="1"><span>85</span></div>
-                                <div class="numeroOption" data-value="2"><span>90</span></div>
-                                <div class="numeroOption" data-value="3"><span>95</span></div>
                             </div>
-                            <div class="precio"><span>$4.350</span></div>
+                            <div class="precio"><span>$10.000</span></div>
                         </div>
                         <button type="button" class="producto__compra" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">
@@ -100,12 +103,13 @@
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        <p>¡Increíble elección! Estás a punto de completar tu pedido del SET COCO. Haz click en 'Encargar Producto' y comienza a disfrutar.</p>
+                                        <p>¡Increíble elección! Estás a punto de completar tu pedido del SET COCO. Haz
+                                            click en 'Encargar Producto' y comienza a disfrutar.</p>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
                                             data-bs-dismiss="modal">Cancelar</button>
-                                            <a class="btn btn-primary" id="encargar_producto"
+                                        <a class="btn btn-primary" id="encargar_producto"
                                             href="//api.whatsapp.com/send?phone=5491166428146&text=Hola, estoy interesada en el producto SET COCO."
                                             target="_blank">Encargar
                                             Producto</a>
@@ -160,10 +164,10 @@
                     <h2>REDES SOCIALES</h2>
                     <div class="icon__svg">
                         <a href="https://api.whatsapp.com/send?phone=5491166428146&text=Hola, estoy interesada en ..."
-                            target="_blank"><img src="../img/icons/whatsapp.svg" alt="whatsapp"></a>
-                        <a href="https://www.instagram.com/_freedom_arg/" target="_blank"><img
+                            target="_blank" rel="noopener"><img src="../img/icons/whatsapp.svg" alt="whatsapp"></a>
+                        <a href="https://www.instagram.com/_freedom_arg/" target="_blank" rel="noopener"><img
                                 src="../img/icons/instagram.png" alt="instagram"></a>
-                        <a href="contacto.html" target="_blank"><img src="../img/icons/gmail.svg" alt="gmail"></a>
+                        <a href="contacto.html" target="_blank" rel="noopener"><img src="../img/icons/gmail.svg" alt="gmail"></a>
                     </div>
                 </div>
             </article>

@@ -3,10 +3,7 @@
 /* *Raiz */
 :root {
     --azul-pastel: rgb(89, 89, 159);
-    --blanco: white;
-
-    /* --tipo-principal: Helvetica, Arial, sans-serif; */
-    /* --tipo-secundaria: Verdana; */
+    --blanco: #fff;
 }
 
 /* *Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation en su ordenador  */
@@ -28,10 +25,7 @@
     border: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    /* Evitar problemas padding y margin */
     vertical-align: baseline;
-    /* Resolver problemas pequeños de imagenes y texto */
-
 }
 
 nav,ul,li{
@@ -64,7 +58,6 @@ li {
 /** Configuramos anclas suaves */
 html {
     scroll-behavior: smooth;
-    /* Scrolleo (Scroll) suave  */
 }
 
 
@@ -114,6 +107,4 @@ svg {
 body {
     min-height: auto;
     font-size: 100%;
-    /* font-family: var(--tipo-principal); */
-    /* color: var(--negro); */
 }

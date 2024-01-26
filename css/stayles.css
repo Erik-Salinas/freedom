@@ -428,6 +428,40 @@ button:focus:before {
   border-radius: 50%;
   cursor: pointer;
 }
+.datos .datos__colores .water__green{
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-color:#44E0D1;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.datos .datos__colores .conchevino{
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-color:#7D253A;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.datos .datos__colores .fuchsia{
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-color: #CC128F;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.datos .datos__colores .white{
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-color: #fff;
+  border: #0000006f 1px solid;
+  border-radius: 50%;
+  cursor: pointer;
+}
 
 .datos__colores .black:hover,
 .datos__colores .red:hover,
