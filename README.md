@@ -1,4 +1,4 @@
-#Peluqueria canina
+#Tienda de Linceria
 
 Es una pagina de linceria para mujeres.
 
